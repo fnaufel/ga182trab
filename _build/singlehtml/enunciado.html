@@ -1,0 +1,280 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>documentação ga-182-trab</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="ga-2018-2-prof-fernando-naufel-trabalho">
+<h1>GA 2018.2 – Prof. Fernando Náufel – Trabalho<a class="headerlink" href="#ga-2018-2-prof-fernando-naufel-trabalho" title="Link permanente para este título">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="representando-conicas-rotacionadas">
+<h2>Representando cônicas rotacionadas<a class="headerlink" href="#representando-conicas-rotacionadas" title="Link permanente para este título">¶</a></h2>
+<p>Alguns programas de computação algébrica permitem especificar uma
+cônica (por exemplo, uma parábola) do seguinte modo:</p>
+<div class="math notranslate nohighlight">
+\[y - 2 = (x - 1)^2, \qquad \frac{\pi}{6}\]</div>
+<p>A primeira parte da especificação é a <em>equação canônica</em> de uma
+parábola com vértice no ponto <span class="math notranslate nohighlight">\(V = (1, 2)\)</span> e eixo focal paralelo
+ao eixo <span class="math notranslate nohighlight">\(Oy\)</span>, como na figura abaixo:</p>
+<a class="reference internal image-reference" href="_images/fig01.png"><img alt="_images/fig01.png" class="align-center" src="_images/fig01.png" style="width: 90%;" /></a>
+<p>Mas a segunda parte da especificação — o ângulo <span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span> —
+significa que a parábola está <em>rotacionada</em> de 30 graus <em>em torno do
+seu vértice</em>, em relação ao sistema de eixos <span class="math notranslate nohighlight">\(Oxy\)</span>.</p>
+<p>Ou seja, a especificação</p>
+<div class="math notranslate nohighlight">
+\[y - 2 = (x - 1)^2, \qquad \frac{\pi}{6}\]</div>
+<p>representa, na verdade, a seguinte parábola rotacionada:</p>
+<a class="reference internal image-reference" href="_images/fig02.png"><img alt="_images/fig02.png" class="align-center" src="_images/fig02.png" style="width: 90%;" /></a>
+<p>Este modo de especificar cônicas facilita a nossa vida, pois não
+precisamos dar a equação geral da parábola rotacionada no sistema
+<span class="math notranslate nohighlight">\(Oxy\)</span>, que é mais trabalhosa de calcular e que tem a forma</p>
+<div class="math notranslate nohighlight">
+\[Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\]</div>
+<p>(Mas como este é um trabalho, e como o objetivo de todo trabalho é dar
+trabalho, uma das suas tarefas vai ser exatamente achar esta equação
+geral.)</p>
+</div>
+<div class="section" id="problemas-com-esta-notacao">
+<h2>Problemas com esta notação<a class="headerlink" href="#problemas-com-esta-notacao" title="Link permanente para este título">¶</a></h2>
+<p>Existe um problema aqui.</p>
+<p>No curso, vimos que, numa parábola com equação <span class="math notranslate nohighlight">\(y-k = a(x-h)^2\)</span>, o
+foco é o ponto <span class="math notranslate nohighlight">\(F = (h, k+\frac{1}{4a})\)</span>.</p>
+<p>Vamos calcular as coordenadas do foco da parábola do nosso exemplo:</p>
+<div class="math notranslate nohighlight">
+\[y - 2 = (x - 1)^2, \qquad \frac{\pi}{6}\]</div>
+<p>Aqui, os valores são <span class="math notranslate nohighlight">\(h = 1\)</span>, <span class="math notranslate nohighlight">\(k = 2\)</span>, <span class="math notranslate nohighlight">\(a = 1\)</span>. Então, o foco seria</p>
+<div class="math notranslate nohighlight">
+\[F = \left( 1, \frac{9}{4} \right)\]</div>
+<p>Certo? Veja a figura:</p>
+<a class="reference internal image-reference" href="_images/fig03.png"><img alt="_images/fig03.png" class="align-center" src="_images/fig03.png" style="width: 90%;" /></a>
+<p>Errado! Este ponto não é o foco da parábola. O foco da parábola sempre
+fica sobre o <em>eixo focal</em> (dã…).</p>
+<p>Eis o local correto do foco:</p>
+<a class="reference internal image-reference" href="_images/fig04.png"><img alt="_images/fig04.png" class="align-center" src="_images/fig04.png" style="width: 90%;" /></a>
+<p>O problema é que, embora a equação da parábola use as variáveis <span class="math notranslate nohighlight">\(x\)</span> e
+<span class="math notranslate nohighlight">\(y\)</span>, a equação, na verdade, se baseia em <em>outro</em> sistema de eixos
+coordenados, rotacionado de <span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span> radianos a partir do eixo
+<span class="math notranslate nohighlight">\(Ox\)</span>.</p>
+<p>(Neste trabalho, uma outra tarefa sua vai ser calcular as coordenadas
+corretas deste foco, no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>)</p>
+<p>Vamos mudar nosso sistema de eixos (duas vezes!) para resolver esta
+confusão.</p>
+</div>
+<div class="section" id="a-equacao-mais-simples-para-esta-parabola">
+<h2>A equação mais simples para esta parábola<a class="headerlink" href="#a-equacao-mais-simples-para-esta-parabola" title="Link permanente para este título">¶</a></h2>
+<p>No curso, no início da matéria sobre parábolas, usamos um sistema de
+eixos cuja <em>origem</em> coincidia com o <em>vértice</em> da parábola e cujo <em>eixo
+vertical</em> coincidia com o <em>eixo focal</em> da parábola.</p>
+<p>Vamos fazer a mesma coisa aqui, chamando os eixos de <span class="math notranslate nohighlight">\(s\)</span> e <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<a class="reference internal image-reference" href="_images/fig05.png"><img alt="_images/fig05.png" class="align-center" src="_images/fig05.png" style="width: 90%;" /></a>
+<p>No novo sistema <span class="math notranslate nohighlight">\(st\)</span>, nossa parábola tem a equação mais simples
+possível:</p>
+<div class="math notranslate nohighlight">
+\[t = s^2\]</div>
+<p>Perceba que o valor de <span class="math notranslate nohighlight">\(a\)</span> não muda quando fazemos rotações e
+translações dos eixos coordenados.</p>
+</div>
+<div class="section" id="convertendo-esta-equacao-para-o-sistema-oxy">
+<h2>Convertendo esta equação para o sistema <span class="math notranslate nohighlight">\(Oxy\)</span><a class="headerlink" href="#convertendo-esta-equacao-para-o-sistema-oxy" title="Link permanente para este título">¶</a></h2>
+<p>Agora vamos transformar esta equação para o sistema <span class="math notranslate nohighlight">\(Oxy\)</span> original.</p>
+<p>O primeiro passo vai ser desfazer a rotação.</p>
+<div class="section" id="desfazendo-a-rotacao">
+<h3>Desfazendo a rotação<a class="headerlink" href="#desfazendo-a-rotacao" title="Link permanente para este título">¶</a></h3>
+<p>Vamos mudar para um terceiro sistema de coordenadas, cuja origem
+coincide com a origem do sistema <span class="math notranslate nohighlight">\(st\)</span>, mas cujos eixos estão
+rotacionados para ficar paralelos aos eixos <span class="math notranslate nohighlight">\(Ox\)</span> e <span class="math notranslate nohighlight">\(Oy\)</span>.</p>
+<p>Vamos chamar este terceiro sistema de <span class="math notranslate nohighlight">\(ij\)</span> e desenhá-lo em vermelho:</p>
+<a class="reference internal image-reference" href="_images/fig06.png"><img alt="_images/fig06.png" class="align-center" src="_images/fig06.png" style="width: 90%;" /></a>
+<p>Qual o ângulo entre o eixo <span class="math notranslate nohighlight">\(i\)</span> e o eixo <span class="math notranslate nohighlight">\(s\)</span>?</p>
+<p>Em outras palavras, qual o ângulo da rotação que temos que desfazer?</p>
+<p>O próprio <span class="math notranslate nohighlight">\(\theta\)</span>, ora!</p>
+<p>As coordenadas <span class="math notranslate nohighlight">\((s, t)\)</span> se relacionam com as coordenadas <span class="math notranslate nohighlight">\((i, j)\)</span>
+pelas igualdades vistas no curso:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+s &amp;= \phantom{-}i \cos\theta + j \text{ sen }\theta \\
+t &amp;= -i \text{ sen }\theta + j \cos\theta
+\end{cases}\end{split}\]</div>
+<p>Use estas igualdades para traduzir a equação da parábola do sistema
+<span class="math notranslate nohighlight">\(st\)</span> para o sistema <span class="math notranslate nohighlight">\(ij\)</span>.</p>
+<p>Isto é, substitua as variáveis <span class="math notranslate nohighlight">\(s\)</span> e <span class="math notranslate nohighlight">\(t\)</span> na equação <span class="math notranslate nohighlight">\(t = s^2\)</span> e use
+<span class="math notranslate nohighlight">\(\cos \frac{\pi}{6} = \frac{\sqrt{3}}{2}\)</span> e <span class="math notranslate nohighlight">\(\text{sen }\frac{\pi}{6}
+= \frac{1}{2}\)</span> para obter uma equação geral no sistema <span class="math notranslate nohighlight">\(ij\)</span> da forma</p>
+<div class="math notranslate nohighlight">
+\[A'i^2 + B'ij + C'j^2 + D'i + E'j + F' = 0\]</div>
+</div>
+<div class="section" id="descendo-para-o-sistema-oxy">
+<h3>“Descendo” para o sistema <span class="math notranslate nohighlight">\(Oxy\)</span><a class="headerlink" href="#descendo-para-o-sistema-oxy" title="Link permanente para este título">¶</a></h3>
+<p>Agora só falta fazer uma translação dos eixos <span class="math notranslate nohighlight">\(i\)</span> e <span class="math notranslate nohighlight">\(j\)</span> para baixo e
+para a esquerda, para chegar ao sistema <span class="math notranslate nohighlight">\(Oxy\)</span>.</p>
+<p>Olhando para o gráfico, qual você acha que é a relação entre
+coordenadas no sistema <span class="math notranslate nohighlight">\(ij\)</span> e coordenadas no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>?</p>
+<p>Complete as igualdades abaixo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+i &amp;= x \ldots \\
+j &amp;= y \ldots
+\end{cases}\end{split}\]</div>
+<p>Em seguida, substitua as variáveis na equação da seção anterior para
+achar a equação geral da parábola original no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>, da forma</p>
+<div class="math notranslate nohighlight">
+\[Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\]</div>
+<p>Pronto. Você achou a equação geral da parábola original no sistema
+<span class="math notranslate nohighlight">\(Oxy\)</span>.</p>
+</div>
+</div>
+<div class="section" id="suas-tarefas">
+<h2>Suas tarefas<a class="headerlink" href="#suas-tarefas" title="Link permanente para este título">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Preencha todos os detalhes do raciocínio acima e escreva a equação
+geral da parábola original no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>.</p>
+</li>
+<li><p class="first">Calcule as coordenadas, no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>, do foco da parábola
+original.</p>
+<p>Atenção: aqui, você precisa de igualdades que exprimam <span class="math notranslate nohighlight">\(i\)</span> e <span class="math notranslate nohighlight">\(j\)</span> em
+função de <span class="math notranslate nohighlight">\(s\)</span> e <span class="math notranslate nohighlight">\(t\)</span>, e de igualdades que exprimam <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span> em
+função de <span class="math notranslate nohighlight">\(i\)</span> e <span class="math notranslate nohighlight">\(j\)</span>.</p>
+</li>
+<li><p class="first">Escreva a equação, no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>, da diretriz da parábola
+original.</p>
+</li>
+<li><p class="first">Para cada uma das equações abaixo, escolha os valores reais que
+você quiser (respeitando as condições) para os parâmetros <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>,
+<span class="math notranslate nohighlight">\(h\)</span>, <span class="math notranslate nohighlight">\(k\)</span> e <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
+<ol class="loweralpha simple">
+<li><span class="math notranslate nohighlight">\(\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1\)</span>, ângulo
+<span class="math notranslate nohighlight">\(\theta\)</span></li>
+<li><span class="math notranslate nohighlight">\(\frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1\)</span>, ângulo
+<span class="math notranslate nohighlight">\(\theta\)</span></li>
+</ol>
+<p>Condições:</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(a, b \neq 0\)</span></li>
+<li><span class="math notranslate nohighlight">\(a, b \neq 1\)</span></li>
+<li><span class="math notranslate nohighlight">\(a \neq b\)</span></li>
+<li><span class="math notranslate nohighlight">\(h, k \neq 0\)</span></li>
+<li><span class="math notranslate nohighlight">\(0 &lt; \theta &lt; \frac{\pi}{2}\)</span></li>
+</ul>
+</li>
+<li><p class="first">Envie para o grupo da disciplina no Telegram as equações com os
+valores reais escolhidos. Cada aluno deve escolher um conjunto
+diferente de valores.</p>
+</li>
+<li><p class="first">Para cada uma das equações com os valores reais que você deu:</p>
+<ol class="loweralpha simple">
+<li>Desenhe a cônica no sistema de eixos <span class="math notranslate nohighlight">\(Oxy\)</span>.</li>
+<li>Desenhe o sistema de eixos <span class="math notranslate nohighlight">\(st\)</span>, indicando o ângulo <span class="math notranslate nohighlight">\(\theta\)</span>.</li>
+<li>Desenhe o sistema de eixos <span class="math notranslate nohighlight">\(ij\)</span>.</li>
+<li>Desenvolva, em detalhes, o raciocínio para achar, no sistema
+<span class="math notranslate nohighlight">\(Oxy\)</span>, a equação geral da cônica.</li>
+<li>Calcule as coordenadas e as equações, no sistema <span class="math notranslate nohighlight">\(Oxy\)</span>, de todos
+os elementos importantes da cônica:<ul>
+<li>Se elipse: vértices (4) e focos (2).</li>
+<li>Se hipérbole: vértices (2), focos (2) e assíntotas (2).</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>Resumindo: cada aluno (sim, o trabalho é individual) precisa achar as
+equações e os elementos importantes de uma elipse e uma hipérbole.</p>
+<p>Bom trabalho.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="enunciado.html#document-enunciado">ga-182-trab</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegação</h3>
+<p class="caption"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="enunciado.html#document-enunciado">GA 2018.2 – Prof. Fernando Náufel – Trabalho</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enunciado.html#representando-conicas-rotacionadas">Representando cônicas rotacionadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enunciado.html#problemas-com-esta-notacao">Problemas com esta notação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enunciado.html#a-equacao-mais-simples-para-esta-parabola">A equação mais simples para esta parábola</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enunciado.html#convertendo-esta-equacao-para-o-sistema-oxy">Convertendo esta equação para o sistema <span class="math notranslate nohighlight">\(Oxy\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enunciado.html#desfazendo-a-rotacao">Desfazendo a rotação</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enunciado.html#descendo-para-o-sistema-oxy">“Descendo” para o sistema <span class="math notranslate nohighlight">\(Oxy\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="enunciado.html#suas-tarefas">Suas tarefas</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="enunciado.html#document-enunciado">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Fernando Náufel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
