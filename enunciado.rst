@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 .. ga-182-trab documentation master file, created by
    sphinx-quickstart on Fri Nov 16 21:17:59 2018.
    You can adapt this file completely to your liking, but it should at least
