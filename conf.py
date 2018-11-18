@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ga-182-trab'
-copyright = '2018, Fernando Náufel'
-author = 'Fernando Náufel'
+copyright = '2018, Fernando Naufel'
+author = 'Fernando Naufel'
 
 # The short X.Y version
 version = ''
