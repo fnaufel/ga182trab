@@ -130,7 +130,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'ga-182-trab.tex', 'ga-182-trab Documentation',
-     'Fernando Náufel', 'manual'),
+     'Fernando Naufel', 'manual'),
 ]
 
 
